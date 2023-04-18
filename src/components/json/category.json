@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "title": "hats",
+    "imageUrl": "https://i.ibb.co/gwrkzjj/photo-1445282804813-123ac28fe498-ixlib-rb-4-0.jpg"
+  },
+  {
+    "id": 2,
+    "title": "jackets",
+    "imageUrl": "https://i.ibb.co/ZxNkbs7/photo-1621774404932-6c1016051fa5-ixlib-rb-4-0.jpg"
+  },
+  {
+    "id": 3,
+    "title": "sneakers",
+    "imageUrl": "https://i.ibb.co/0m0CZMb/photo-1516478177764-9fe5bd7e9717-ixlib-rb-4-0.jpg"
+  },
+  {
+    "id": 4,
+    "title": "womens",
+    "imageUrl": "https://i.ibb.co/Ch6jcys/photo-1503342217505-b0a15ec3261c-ixlib-rb-4-0.jpg"
+  },
+  {
+    "id": 5,
+    "title": "mens",
+    "imageUrl": "https://i.ibb.co/3CfyRWj/photo-1504593811423-6dd665756598-ixlib-rb-4-0.jpg"
+  }
+]

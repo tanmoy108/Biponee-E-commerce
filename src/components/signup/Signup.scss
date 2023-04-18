@@ -1,0 +1,19 @@
+.signup_body {
+  display: flex;
+  flex-direction: column;
+  background: rgb(236, 236, 236);
+  width: 50%;
+  align-items: center;
+  padding-bottom: 10px;
+
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .signup_body {
+    width: 100%;
+  }
+}
