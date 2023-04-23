@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
 import { TextField, Button } from "@mui/material";
 import {
   createAuthUserWithEmailPassword,
   createUserDocumentFromAuth,
 } from "../../utils/firebase/firebase_utils.js";
 import "./Signup.scss";
+
 const SignUp = () => {
   const [current, update] = useState({
     displayName: "",
@@ -14,6 +15,7 @@ const SignUp = () => {
   });
 
   const { displayName, email, password, confirmPassword } = current;
+
 
   const resetField = () => {
     update({
@@ -59,7 +61,7 @@ const SignUp = () => {
   return (
     <>
       <div className="signup_body">
-        <h2>Don't have an account ?</h2>
+        <h2 style={{ textAlign: "center" }}>Don't have an account ?</h2>
         <form onSubmit={Onsubmit} className="form">
           <TextField
             sx={{ mb: 1 }}

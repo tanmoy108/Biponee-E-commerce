@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React,{useState} from "react";
 import { TextField, Button } from "@mui/material";
 import {
   signInWithGooglePopup,
-  createUserDocumentFromAuth,
   signInAuthUserWithEmailPassword,
 } from "../../utils/firebase/firebase_utils.js";
 import "./Login.scss";
@@ -13,11 +12,11 @@ const Login = () => {
     password: "",
   });
 
+
   const { email, password } = current;
 
   const logGoogleUser = async () => {
-    const { user } = await signInWithGooglePopup();
-    createUserDocumentFromAuth(user);
+    await signInWithGooglePopup();
   };
 
   const resetField = () => {
@@ -40,8 +39,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await signInAuthUserWithEmailPassword(email, password);
-      console.log(response);
+     await signInAuthUserWithEmailPassword(email, password);
       resetField();
     } catch (err) {
       switch (err.code) {
@@ -61,7 +59,7 @@ const Login = () => {
   return (
     <>
       <div className="login_body">
-        <h2>Already have an account ?</h2>
+        <h2 style={{ textAlign: "center" }}>Already have an account ?</h2>
         <form onSubmit={Onsubmit} className="form">
           <TextField
             sx={{ mb: 1 }}

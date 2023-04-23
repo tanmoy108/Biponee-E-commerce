@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   Drawer,
   List,
@@ -8,7 +9,7 @@ import {
 } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Link } from "react-router-dom";
+import LoginButton from "./LoginButton.jsx";
 
 const useStyles = makeStyles(() => ({
   link: {
@@ -51,9 +52,7 @@ function DrawerComponent() {
           </ListItem>
           <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
-              <Link to="/auth" className={classes.link}>
-                Login
-              </Link>
+              <LoginButton className="smlink" />
             </ListItemText>
           </ListItem>
         </List>

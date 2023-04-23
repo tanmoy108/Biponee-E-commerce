@@ -1,0 +1,18 @@
+.navigation_login_button {
+  .link {
+    text-decoration: none;
+    color: #ffff;
+    font-size: 20px;
+    margin-left: 40px;
+
+    &:hover {
+      color: rgb(255, 251, 2);
+      cursor: pointer;
+    }
+  }
+  .smlink {
+    text-decoration: none;
+    color: #000000;
+    font-size: 15px;
+  }
+}

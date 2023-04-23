@@ -11,8 +11,9 @@ import {
   createTheme,
 } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import DrawerComponent from "./Drawer.jsx";
 import FlutterDashIcon from "@mui/icons-material/FlutterDash";
+import DrawerComponent from "./Drawer.jsx";
+import LoginButton from "./LoginButton.jsx";
 
 const theme = createTheme();
 const useStyles = makeStyles(() => ({
@@ -45,18 +46,17 @@ const Navigation = () => {
       <AppBar position="sticky" sx={{ mb: 3 }}>
         <CssBaseline />
         <Toolbar>
-
-            <IconButton
-              color="inherit"
-              aria-label="flutter dash icon"
-              edge="start"
-              size="large"
-            >
-              <FlutterDashIcon />
-            </IconButton>
-            <Typography variant="h4" className={classes.logo}>
-              BIPONEE
-            </Typography>
+          <IconButton
+            color="inherit"
+            aria-label="flutter dash icon"
+            edge="start"
+            size="large"
+          >
+            <FlutterDashIcon />
+          </IconButton>
+          <Typography variant="h4" className={classes.logo}>
+            BIPONEE
+          </Typography>
 
           {isMobile ? (
             <DrawerComponent />
@@ -71,9 +71,7 @@ const Navigation = () => {
               <Link to="/contact" className={classes.link}>
                 Contact
               </Link>
-              <Link to="/auth" className={classes.link}>
-                Login
-              </Link>
+              <LoginButton className="link" />
             </div>
           )}
         </Toolbar>
