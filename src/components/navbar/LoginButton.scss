@@ -16,3 +16,11 @@
     font-size: 15px;
   }
 }
+
+@media (max-width: 704px) {
+  .navigation_login_button {
+    .link {
+      margin-left: 24px;
+    }
+  }
+}

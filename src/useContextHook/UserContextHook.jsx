@@ -1,12 +1,12 @@
 import {React,createContext,useState,useEffect} from 'react';
-import {onAuthStateChangedListener,createUserDocumentFromAuth} from "../../utils/firebase/firebase_utils.js";
+import {onAuthStateChangedListener,createUserDocumentFromAuth} from "../utils/firebase/firebase_utils.js";
 
-export const context = createContext({
+export const userContext = createContext({
   currentUser : null,
   setCurrentUser: ()=>null,
 });
 
-const UseContextHook = ({children}) => {
+const UserContextHook = ({children}) => {
 
   const [currentUser, setCurrentUser] = useState(null);
   const value = {currentUser,setCurrentUser};
@@ -23,10 +23,10 @@ const UseContextHook = ({children}) => {
 
 
   return (
-   <context.Provider value={value}>
+   <userContext.Provider value={value}>
           {children}
-   </context.Provider>
+   </userContext.Provider>
   )
 }
 
-export default UseContextHook
+export default UserContextHook
