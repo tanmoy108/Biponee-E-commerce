@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 
-import { cartContext } from "../../useContextHook/CartContextHook.jsx";
+import { cartContext } from "../../../useContextHook/CartContextHook.jsx";
 import "./ProductCard.scss";
 
 const ProductCard = (props) => {

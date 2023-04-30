@@ -3,7 +3,7 @@ import { Link, Outlet } from "react-router-dom";
 import {
   AppBar,
   Toolbar,
-  CssBaseline,
+  // CssBaseline,
   Typography,
   useTheme,
   useMediaQuery,
@@ -14,8 +14,8 @@ import { makeStyles } from "@mui/styles";
 import FlutterDashIcon from "@mui/icons-material/FlutterDash";
 import DrawerComponent from "./Drawer.jsx";
 import LoginButton from "./LoginButton.jsx";
-import CartIcon from "../cartIcon/CartIcon.jsx";
-import CartDropdown from "../cartDropdown/CartDropdown.jsx";
+import CartIcon from "../cart/cartIcon/CartIcon.jsx";
+import CartDropdown from "../cart/cartDropdown/CartDropdown.jsx";
 import { cartContext } from "../../useContextHook/CartContextHook";
 
 const theme = createTheme();
@@ -55,7 +55,7 @@ const Navigation = () => {
   return (
     <>
       <AppBar position="sticky" sx={{ mb: 3 }}>
-        <CssBaseline />
+        {/* <CssBaseline /> */}
         <Toolbar>
           <IconButton
             color="inherit"

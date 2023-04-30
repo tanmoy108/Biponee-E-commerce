@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { productContext } from "../../useContextHook/ProductContextHook";
+import { productContext } from "../../../useContextHook/ProductContextHook";
 import ProductCard from "./ProductCard";
 import "./Shop.scss";
 
