@@ -107,7 +107,12 @@ const SignUp = () => {
             autoComplete="current_confirm_password"
             required
           />
-          <Button sx={{ mt: 5 }} variant="contained" type="submit">
+          <Button
+            sx={{ mt: 5 }}
+            variant="contained"
+            type="submit"
+            className="signup-button"
+          >
             Sign Up
           </Button>
         </form>

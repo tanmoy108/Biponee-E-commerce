@@ -14,11 +14,11 @@ const LoginButton = (props) => {
     <div className="navigation_login_button">
       {currentUser ? (
         <span className={className} onClick={signOutUser}>
-          Signout
+          SIGN OUT
         </span>
       ) : (
         <Link to="/auth" className={className}>
-          Login
+          LOGIN
         </Link>
       )}
     </div>

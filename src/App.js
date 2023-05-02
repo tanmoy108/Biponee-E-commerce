@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./components/routes/home/Home.jsx";
-import Shop from "./components/routes/shop/Shop.jsx";
+import ShopRoute from "./components/routes/shop/shopRoutes/ShopRoute.jsx";
 import Authentication from "./components/routes/authentication/Authentication.jsx";
 import Contact from "./components/routes/contact/Contact.jsx"
 import Navigation from "./components/navbar/Navigation.jsx";
@@ -12,10 +12,10 @@ const App = () => {
     <Routes>
       <Route path="/" element={<Navigation />}>
         <Route index element={<Home />} />
-        <Route path="shop" element={<Shop />} />
+        <Route path="shop/*" element={<ShopRoute />} />
         <Route path="contact" element={<Contact />} />
         <Route path="auth" element={<Authentication />} />
-        <Route path="shop/checkout" element={<CheckOut />} />
+        <Route path="checkout" element={<CheckOut />} />
       </Route>
     </Routes>
   );

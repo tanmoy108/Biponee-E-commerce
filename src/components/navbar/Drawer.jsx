@@ -14,11 +14,12 @@ import LoginButton from "./LoginButton.jsx";
 const useStyles = makeStyles(() => ({
   link: {
     textDecoration: "none",
-    color: "black",
-    fontSize: "15px",
+    color: "rgb(56, 56, 56)",
+    fontSize: "1rem",
   },
   icon: {
-    color: "white",
+    color: "rgb(56, 56, 56)",
+    fontSize:"2rem !important",
   },
 }));
 
@@ -32,21 +33,21 @@ function DrawerComponent() {
           <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
               <Link to="/" className={classes.link}>
-                Home
+                HOME
               </Link>
             </ListItemText>
           </ListItem>
           <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
               <Link to="/shop" className={classes.link}>
-                Shop
+                SHOP
               </Link>
             </ListItemText>
           </ListItem>
           <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
               <Link to="/contact" className={classes.link}>
-                Contact
+                CONTACT
               </Link>
             </ListItemText>
           </ListItem>

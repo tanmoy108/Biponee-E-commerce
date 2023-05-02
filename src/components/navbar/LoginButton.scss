@@ -1,19 +1,22 @@
 .navigation_login_button {
   .link {
     text-decoration: none;
-    color: #ffff;
-    font-size: 20px;
+    color:  #FEFBF6;
+    font-size: 1.25rem;
     margin-left: 40px;
+    background: linear-gradient(329deg, rgba(67,226,200,1) 0%, rgb(130, 19, 204) 0%, rgba(163,44,223,1) 100%);
+    padding: 10px 30px ;
+    border-radius: 8px;
 
     &:hover {
-      color: rgb(255, 251, 2);
       cursor: pointer;
+      background: linear-gradient(329deg, rgba(67,226,200,1) 0%, rgb(130, 19, 204) 0%, rgb(137, 37, 187) 100%);
     }
   }
   .smlink {
     text-decoration: none;
-    color: #000000;
-    font-size: 15px;
+    color: rgb(56, 56, 56);
+    font-size: 1rem;
   }
 }
 

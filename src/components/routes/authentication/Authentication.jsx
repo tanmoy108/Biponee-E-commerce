@@ -6,9 +6,11 @@ import "./Authentication.scss";
 const Authentication = () => {
 
   return (
-    <div className="authentication_container">
-      <Login />
-      <SignUp />
+    <div className="bg-img">
+      <div className="authentication_container">
+        <Login />
+        <SignUp />
+      </div>
     </div>
   );
 };

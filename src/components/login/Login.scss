@@ -1,30 +1,39 @@
-.login_body
-{
+.login_body {
   display: flex;
   flex-direction: column;
-  background: rgb(236, 236, 236);
+  background: #e5f5fce5;
   width: 50%;
   align-items: center;
   padding-bottom: 10px;
 
-
+  h2 {
+    font-size: 1.5rem !important;
+    margin-bottom: 20px;
+  }
   .form {
     display: flex;
     flex-direction: column;
 
-    .button_group
-    {
-      margin-top: 15px;
+    .button_group {
+      margin-top: 25px;
       display: flex;
       flex-direction: column;
+
+      .login-button,
+      .login-google-button {
+        background: linear-gradient(
+          329deg,
+          rgba(67, 226, 200, 1) 0%,
+          rgb(130, 19, 204) 0%,
+          rgba(163, 44, 223, 1) 100%
+        );
+      }
     }
   }
 }
 
-@media  screen and (max-width:800px) {
-
-  .login_body{
-    width:100%;
+@media screen and (max-width: 800px) {
+  .login_body {
+    width: 100%;
   }
-
 }

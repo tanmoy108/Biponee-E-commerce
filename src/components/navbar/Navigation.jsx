@@ -1,22 +1,21 @@
 import React, { useContext } from "react";
+import {useNavigate} from "react-router-dom";
 import { Link, Outlet } from "react-router-dom";
 import {
   AppBar,
   Toolbar,
-  // CssBaseline,
   Typography,
   useTheme,
   useMediaQuery,
-  IconButton,
   createTheme,
 } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import FlutterDashIcon from "@mui/icons-material/FlutterDash";
 import DrawerComponent from "./Drawer.jsx";
 import LoginButton from "./LoginButton.jsx";
 import CartIcon from "../cart/cartIcon/CartIcon.jsx";
 import CartDropdown from "../cart/cartDropdown/CartDropdown.jsx";
 import { cartContext } from "../../useContextHook/CartContextHook";
+
 
 const theme = createTheme();
 const useStyles = makeStyles(() => ({
@@ -31,11 +30,11 @@ const useStyles = makeStyles(() => ({
   },
   link: {
     textDecoration: "none",
-    color: "white",
-    fontSize: "20px",
+    color: "rgb(56, 56, 56)",
+    fontSize: "1.25rem",
     marginLeft: theme.spacing(5),
     "&:hover": {
-      color: "yellow",
+      color: "rgb(43, 43, 43)",
     },
   },
   "@media (max-width: 704px)": {
@@ -47,6 +46,7 @@ const useStyles = makeStyles(() => ({
 
 const Navigation = () => {
   const { isCartOpen } = useContext(cartContext);
+  const navigate = useNavigate();
 
   const classes = useStyles();
   const theme = useTheme();
@@ -54,18 +54,18 @@ const Navigation = () => {
 
   return (
     <>
-      <AppBar position="sticky" sx={{ mb: 3 }}>
-        {/* <CssBaseline /> */}
+      <AppBar
+        position="sticky"
+        sx={{backgroundColor: "#FEFBF6", boxShadow: 2 }}
+        className="appbar"
+      >
         <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="flutter dash icon"
-            edge="start"
-            size="large"
+          <Typography
+            variant="h4"
+            className={classes.logo}
+            sx={{ color: "rgb(56, 56, 56)" }}
+            onClick={()=>navigate("/")}
           >
-            <FlutterDashIcon />
-          </IconButton>
-          <Typography variant="h4" className={classes.logo}>
             BIPONEE
           </Typography>
 
@@ -74,13 +74,13 @@ const Navigation = () => {
           ) : (
             <div className={classes.navlinks}>
               <Link to="/" className={classes.link}>
-                Home
+                HOME
               </Link>
               <Link to="/shop" className={classes.link}>
-                Shop
+                SHOP
               </Link>
               <Link to="/contact" className={classes.link}>
-                Contact
+                CONTACT
               </Link>
               <LoginButton className="link" />
             </div>

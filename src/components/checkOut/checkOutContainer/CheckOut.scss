@@ -29,3 +29,21 @@
     font-size: 36px;
   }
 }
+
+@media screen and (max-width: 670px) {
+  .checkout-container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .header-block {
+    overflow: hidden;
+    text-align: center;
+
+    &:nth-child(4) {
+      width: 15%;
+      text-align: center;
+    }
+  }
+}

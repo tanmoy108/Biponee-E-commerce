@@ -25,7 +25,7 @@ const CheckOutItem = (props) => {
         <span className="value">{quantity}</span>
         <div
           className="arrow"
-           onClick={() => {
+          onClick={() => {
             addItemToCart(props.value);
           }}
         >

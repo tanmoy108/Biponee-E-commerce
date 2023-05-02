@@ -1,12 +1,13 @@
 .cart-dropdown-container {
-  position:fixed;
+  position: fixed;
   width: 240px;
   height: 340px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   padding: 20px;
-  border: 1px solid black;
-  background-color: white;
+  border: 1px solid rgb(56, 56, 56);
+  background-color:  #FEFBF6;
   top: 70px;
   right: 30px;
   z-index: 5;
@@ -25,5 +26,24 @@
 
   button {
     margin-top: auto;
+    padding: 10px;
+    background: linear-gradient(
+      329deg,
+      rgba(67, 226, 200, 1) 0%,
+      rgb(130, 19, 204) 0%,
+      rgba(163, 44, 223, 1) 100%
+    );
+    border: none;
+    color: white;
+    text-transform: uppercase;
+
+    &:hover {
+      background: linear-gradient(
+        329deg,
+        rgba(67, 226, 200, 1) 0%,
+        rgb(130, 19, 204) 0%,
+        rgb(137, 37, 187) 100%
+      );
+    }
   }
 }

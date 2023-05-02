@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import UserContextHook from "./useContextHook/UserContextHook";
-import ProductContextHook from "./useContextHook/ProductContextHook";
+import CategoryContextHook from "./useContextHook/CategoryContextHook";
 import CartContextHook from "./useContextHook/CartContextHook";
 import "./index.scss";
 import reportWebVitals from "./reportWebVitals";
@@ -13,11 +13,11 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <UserContextHook>
-        <ProductContextHook>
+        <CategoryContextHook>
           <CartContextHook>
             <App />
           </CartContextHook>
-        </ProductContextHook>
+        </CategoryContextHook>
       </UserContextHook>
     </BrowserRouter>
   </React.StrictMode>

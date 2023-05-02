@@ -9,7 +9,7 @@ const CartDropdown = () => {
   const navigate = useNavigate();
 
   const GoToCheckOut = () => {
-    navigate("/shop/checkout");
+    navigate("/checkout");
   };
 
   return (
@@ -19,7 +19,11 @@ const CartDropdown = () => {
           return <CartItem cartitem={productitem} key={productitem.id} />;
         })}
       </div>
-      <button onClick={GoToCheckOut}>Checkout</button>
+      {cartItemArray.length > 0 ? (
+        <button onClick={GoToCheckOut}>Checkout</button>
+      ) : (
+        <button disabled>Checkout</button>
+      )}
     </div>
   );
 };

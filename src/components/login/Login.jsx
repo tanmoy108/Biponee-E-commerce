@@ -83,10 +83,19 @@ const Login = () => {
             required
           />
           <div className="button_group">
-            <Button variant="contained" type="submit">
+            <Button
+              variant="contained"
+              type="submit"
+              className="login-button"
+            >
               Log In
             </Button>
-            <Button sx={{ mt: 1 }} variant="contained" onClick={logGoogleUser}>
+            <Button
+              sx={{ mt: 1 }}
+              variant="contained"
+              className="login-google-button"
+              onClick={logGoogleUser}
+            >
               Sign in with Google
             </Button>
           </div>

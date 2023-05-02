@@ -39,3 +39,12 @@
     cursor: pointer;
   }
 }
+
+@media screen and (max-width: 428px) {
+  .checkout-item-container {
+    .price {
+      width: 15%;
+      text-align: center;
+    }
+  }
+}

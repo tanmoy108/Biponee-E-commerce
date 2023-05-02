@@ -1,14 +1,26 @@
 .signup_body {
   display: flex;
   flex-direction: column;
-  background: rgb(236, 236, 236);
+  background: rgba(255, 247, 247, 0.904);
   width: 50%;
   align-items: center;
   padding-bottom: 10px;
 
+  h2 {
+    font-size: 1.5rem !important;
+  }
   .form {
     display: flex;
     flex-direction: column;
+  }
+
+  .signup-button {
+    background: linear-gradient(
+      329deg,
+      rgba(67, 226, 200, 1) 0%,
+      rgb(130, 19, 204) 0%,
+      rgba(163, 44, 223, 1) 100%
+    );
   }
 }
 
