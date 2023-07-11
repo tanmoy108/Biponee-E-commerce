@@ -1,14 +1,12 @@
-import React, { useContext } from "react";
+import React from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { userContext } from "../../useContextHook/UserContextHook.jsx";
 import { signOutUser } from "../../utils/firebase/firebase_utils.js";
 import "./LoginButton.scss"
 
 const LoginButton = (props) => {
   const { className} = props;
-
-
-  const { currentUser} = useContext(userContext);
+  const currentUser = useSelector((state)=>state.user.currentUser)
 
   return (
     <div className="navigation_login_button">
