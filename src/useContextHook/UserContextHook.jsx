@@ -13,10 +13,14 @@ const INITIAL_STATE = {
   currentUser: null,
 };
 
+export const USER_ACTION_TYPES = {
+  SET_CURRENT_USER : "SET_CURRENT_USER"
+}
+
 const UserReducer = (state, action) => {
   const { type, payload } = action;
   switch (type) {
-    case "SET_CURRENT_USER":
+    case USER_ACTION_TYPES.SET_CURRENT_USER:
       return {
         ...state,
         currentUser: payload,
@@ -35,7 +39,7 @@ const UserContextHook = ({ children }) => {
   //console.log(currentUser);
   const setCurrentUser = (user) => {
     dispatch({
-      type: "SET_CURRENT_USER",
+      type: USER_ACTION_TYPES.SET_CURRENT_USER,
       payload: user,
     });
   };
