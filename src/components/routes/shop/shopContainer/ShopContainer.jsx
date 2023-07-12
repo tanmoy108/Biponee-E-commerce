@@ -1,11 +1,11 @@
-import React, { useContext } from "react";
+import React from "react";
+import { useSelector } from "react-redux"
 import Container from "@mui/material/Container";
-import { categoryContext } from "../../../../useContextHook/CategoryContextHook";
 import ShopPreview from "../shopPreview/ShopPreview.jsx";
-// import "./ShopContainer.scss";
+import { categorySelector } from "../../../../redux/category/categorySelector";
 
 const ShopContainer = () => {
-  const { category } = useContext(categoryContext);
+  const category = useSelector(categorySelector)
   return (
     <Container>
       <div>
