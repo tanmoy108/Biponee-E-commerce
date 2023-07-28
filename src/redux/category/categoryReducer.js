@@ -1,7 +1,7 @@
 import { CATEGORY_ACTION_TYPES } from "./categoryActionType"
 
 const INITIAL_STATE = {
-  category: {}
+  category: []
 }
 
 const CategoryReducer = (state = INITIAL_STATE, action) => {

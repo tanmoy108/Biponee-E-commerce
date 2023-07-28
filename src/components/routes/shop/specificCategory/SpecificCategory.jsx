@@ -7,15 +7,19 @@ import "./SpecificCategory.scss";
 import { categorySelector } from "../../../../redux/category/categorySelector";
 
 const SpecifiCategory = () => {
-  const category = useSelector(categorySelector)
   const { categoryName } = useParams();
+  console.log("rendering SpecificCategory");
+  const category = useSelector(categorySelector)
+  // console.log(category) // object
   const [specificProduct, setSpecificProduct] = useState(
     category[categoryName]
   );
 
   useEffect(() => {
+    console.log("useEffect Fired setSpecificProduct")
     setSpecificProduct(category[categoryName]);
-  }, [category, specificProduct]);
+    // console.log(specificProduct) //array
+  }, [categoryName, category]);
   return (
     <Container>
       <Grid container spacing={2}>

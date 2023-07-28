@@ -9,12 +9,13 @@ import SpecificCategory from "../specificCategory/SpecificCategory.jsx";
 const ShopRoute = () => {
   const dispatch = useDispatch();
   useEffect(() => {
-    const getCategoryMap = async () => {
-      const categoryMap = await getCollectionAndDocument();
-      dispatch(setCategory(categoryMap));
+    const getCategoryArray = async () => {
+      const categoryArray = await getCollectionAndDocument();
+      // console.log(categoryArray) //array
+      dispatch(setCategory(categoryArray));
     };
-    getCategoryMap();
-  }, []);
+    getCategoryArray();
+  }, [dispatch]);
 
   return (
     <Routes>

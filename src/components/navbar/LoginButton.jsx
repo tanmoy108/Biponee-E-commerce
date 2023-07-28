@@ -6,7 +6,7 @@ import "./LoginButton.scss"
 
 const LoginButton = (props) => {
   const { className} = props;
-  const currentUser = useSelector((state)=>state.user.currentUser)
+  const currentUser = useSelector((state)=>state.userKey.currentUser)
 
   return (
     <div className="navigation_login_button">
