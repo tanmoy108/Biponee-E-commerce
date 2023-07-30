@@ -1,11 +1,13 @@
-import { useContext } from "react";
-import { cartContext } from "../../../useContextHook/CartContextHook.jsx";
+import { useDispatch, useSelector } from "react-redux"
+import { addItemToCart, removeItemFromCart, deleteItemFromCart } from "../../../redux/cart/cartAction"
 import "./CheckOutItem.scss";
+import { SelectCartItemArray } from "../../../redux/cart/cartSelector";
+
 
 const CheckOutItem = (props) => {
+  const dispatch = useDispatch();
   const { name, imageUrl, quantity, price } = props.value;
-  const { addItemToCart, removeItemFromCart, deleteItemFromCart } =
-    useContext(cartContext);
+  const cartItemArray = useSelector(SelectCartItemArray);
   return (
     <div className="checkout-item-container">
       <div className="image-container">
@@ -17,7 +19,7 @@ const CheckOutItem = (props) => {
         <div
           className="arrow"
           onClick={() => {
-            removeItemFromCart(props.value);
+            dispatch(removeItemFromCart(cartItemArray, props.value));
           }}
         >
           &#10092;
@@ -26,7 +28,7 @@ const CheckOutItem = (props) => {
         <div
           className="arrow"
           onClick={() => {
-            addItemToCart(props.value);
+            dispatch(addItemToCart(cartItemArray, props.value));
           }}
         >
           &#10093;
@@ -36,7 +38,7 @@ const CheckOutItem = (props) => {
       <span
         className="remove-button"
         onClick={() => {
-          deleteItemFromCart(props.value);
+          dispatch(deleteItemFromCart(cartItemArray, props.value));
         }}
       >
         &#10005;

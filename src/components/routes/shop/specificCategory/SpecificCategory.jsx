@@ -8,7 +8,7 @@ import { categorySelector } from "../../../../redux/category/categorySelector";
 
 const SpecifiCategory = () => {
   const { categoryName } = useParams();
-  console.log("rendering SpecificCategory");
+  // console.log("rendering SpecificCategory");
   const category = useSelector(categorySelector)
   // console.log(category) // object
   const [specificProduct, setSpecificProduct] = useState(
@@ -16,7 +16,7 @@ const SpecifiCategory = () => {
   );
 
   useEffect(() => {
-    console.log("useEffect Fired setSpecificProduct")
+    // console.log("useEffect Fired setSpecificProduct")
     setSpecificProduct(category[categoryName]);
     // console.log(specificProduct) //array
   }, [categoryName, category]);

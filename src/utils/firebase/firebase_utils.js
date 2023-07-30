@@ -50,7 +50,7 @@ export const addCollectionAndDocument = async (collectionKey, objectToAdd) => {
   });
 
   await batch.commit();
-  console.log("done");
+  // console.log("done");
 };
 
 export const getCollectionAndDocument = async () => {
@@ -70,10 +70,10 @@ export const createUserDocumentFromAuth = async (
   if (!userAuthObject) return;
 
   const userDocRef = doc(db, "users", userAuthObject.uid);
-  console.log(userDocRef);
+  // console.log(userDocRef);
 
   const userSnapshot = await getDoc(userDocRef);
-  console.log(userSnapshot.exists());
+  // console.log(userSnapshot.exists());
 
   if (!userSnapshot.exists()) {
     const { displayName, email } = userAuthObject;

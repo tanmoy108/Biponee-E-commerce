@@ -1,5 +1,5 @@
-import React, { useContext } from "react";
-import {useNavigate} from "react-router-dom";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Link, Outlet } from "react-router-dom";
 import {
   AppBar,
@@ -14,8 +14,8 @@ import DrawerComponent from "./Drawer.jsx";
 import LoginButton from "./LoginButton.jsx";
 import CartIcon from "../cart/cartIcon/CartIcon.jsx";
 import CartDropdown from "../cart/cartDropdown/CartDropdown.jsx";
-import { cartContext } from "../../useContextHook/CartContextHook";
-
+import { SelectIsCartOpen } from "../../redux/cart/cartSelector.js";
+import { useSelector } from "react-redux";
 
 const theme = createTheme();
 const useStyles = makeStyles(() => ({
@@ -45,7 +45,7 @@ const useStyles = makeStyles(() => ({
 }));
 
 const Navigation = () => {
-  const { isCartOpen } = useContext(cartContext);
+  const isCartOpen = useSelector(SelectIsCartOpen);
   const navigate = useNavigate();
 
   const classes = useStyles();
@@ -56,7 +56,7 @@ const Navigation = () => {
     <>
       <AppBar
         position="sticky"
-        sx={{backgroundColor: "#FEFBF6", boxShadow: 2 }}
+        sx={{ backgroundColor: "#FEFBF6", boxShadow: 2 }}
         className="appbar"
       >
         <Toolbar>
@@ -64,7 +64,7 @@ const Navigation = () => {
             variant="h4"
             className={classes.logo}
             sx={{ color: "rgb(56, 56, 56)" }}
-            onClick={()=>navigate("/")}
+            onClick={() => navigate("/")}
           >
             BIPONEE
           </Typography>
