@@ -31,6 +31,12 @@ export const categorySelector = createSelector(
    }
 );
 
+export const isLoadingSelectReducer = createSelector(
+  [selectCategoryReducer],
+  (categorySlice) => {
+    return categorySlice.isLoading // state value
+  }
+)
 
 // //with out reselect
 // export const categorySelector = (state) => {

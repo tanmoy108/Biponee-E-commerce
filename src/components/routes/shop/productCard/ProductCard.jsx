@@ -11,7 +11,7 @@ const ProductCard = (props) => {
   const { name, imageUrl, price } = props.value;
 
   const AddItemToCart = () => {
-    dispatch(addItemToCart(cartItemArray,props.value));
+    dispatch(addItemToCart(cartItemArray, props.value));
   };
   return (
     <div className="product-container">
