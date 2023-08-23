@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux"
-import { fetchCategoryAsync } from "../../../../redux/category/categoryAction";
+import { fetchCategoryStart} from "../../../../redux/category/categoryAction";
 import { Routes, Route } from "react-router-dom";
 import ShopContainer from "../shopContainer/ShopContainer.jsx";
 import SpecificCategory from "../specificCategory/SpecificCategory.jsx";
@@ -8,7 +8,7 @@ import SpecificCategory from "../specificCategory/SpecificCategory.jsx";
 const ShopRoute = () => {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchCategoryAsync);
+    dispatch(fetchCategoryStart());
   }, [dispatch]);
 
   return (
